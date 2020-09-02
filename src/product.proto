@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package product;
+
+service AppController{
+  rpc CreateProduct (Name) returns (Product);
+}
+
+message Name {
+  string name = 1;
+}
+
+message Product {
+  message obj {
+    string name = 1;
+  }
+  obj response = 1;
+}
